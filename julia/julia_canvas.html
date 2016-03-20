@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Julia fractal set - Canvas</title>
+        <meta name="description" content="3 ways to compute Julia fractal set in realtime with HTML5. Single javascript process, 4 webworkers process and the powerfull WebGL-GLSL Shader.">
+        <meta name="keywords" content="experiment,html5,canvas,webgl,web workers">
+        <meta property="og:title" content="Julia fractal set - Canvas.">
+        <meta property="og:url" content="http://www.ycake.fr/julia/julia_canvas.html">
+        <meta property="og:site_name" content="Julia Set Experiment">
+        <meta property="og:type" content="experiment">
+        <meta property="og:description" content="3 ways to compute Julia fractal set with HTML5. Single javascript process, 4 webworkers process, and the powerfull WebGL-GLSL Shader.">
+        <meta property="og:image" content="http://www.ycake.fr/julia/graph/julia_small.png">
+        <link href='http://fonts.googleapis.com/css?family=Syncopate' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/demo.css">
+    </head>
+    
+    <body>
+        <header>
+            <div class="badge"><a href="http://www.w3.org/html/logo/">
+                    <img class="badge" src="graph/html5-badge-h-css3-graphics-performance.png" width="99" height="32" alt="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Performance &amp; Integration" title="HTML5 Powered with CSS3 / Styling, Graphics, 3D &amp; Effects, and Performance &amp; Integration">
+                    </a></div>
+            <h1>Julia Fractal Set Experiment : </h1>
+            <ul>
+                <li class="current"><a href="julia_canvas.html">Canvas</a></li>
+                <li><p></p></li>
+                <li><a href="julia_workers.html">Canvas + Webworkers</a></li>
+                <li><p></p></li>
+                <li><a href="julia_webgl.html">WebGl</a></li>
+            </ul>
+        </header>
+
+        <div id="centerbox">
+            <h3 id="title">Renderer using canvas only</h3>
+            <canvas id="c01" width="600" height="600"></canvas>
+            <div class="option">
+                <div class="leftpan">
+                    <label for="constA">Constant A :</label>
+                    <input id="constA" type="range" min=-1000 max=1000 value=0 />
+                    <span id="constAValue">0</span>
+                    <br>
+                    <label for="constB">Constant B :</label>
+                    <input id="constB" type="range" min=-1000 max=1000 value=0 />
+                    <span id="constBValue">0</span>
+                </div>
+                <div class="rightpan">
+                    <label for="btAnimation">Animation : <span id="chrono"></span></label>
+                    <a id="btAnimation" class="btonoff off">Off</a>
+                </div>
+            </div>
+            <div id="palette">
+                <label for="gradient">Gradient :</label>
+                <div id="gradient" class="gradient"></div>
+            </div>
+        </div>
+
+        <footer>Julia set experiment - Coded by David Roume - Source code on <a href="https://github.com/NeKoFu/Julia-set-experiment">github</a></footer>
+
+        <script type="text/javascript" language=javascript src="js/canvas2DDrawer.js"></script>
+        <script type="text/javascript" language=javascript src="js/complex.js"></script>
+        <script type="text/javascript" language=javascript src="js/palette.js"></script>
+        <script type="text/javascript" language=javascript src="js/julia.js"></script>
+        <script type="text/javascript" language=javascript src="js/juliaDemo.js"></script>
+    </body>
+</html>
