@@ -147,8 +147,6 @@ header > ul li {
     padding: 4px 20px 0px 0px;
     color: #fff !important;
     text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
-
-    /*font-family: 'Courgette', cursive;*/
     font-family: 'Syncopate', sans-serif;
     font-size: 12pt;
     margin-top: -4pt;
@@ -169,8 +167,12 @@ header > ul li a {
     text-decoration: none;
     text-shadow: none;
 }
-header > ul li a:hover, header > ul li a:focus {
+header > ul li a:hover, header > ul li a:focus{
     color: #dfd !important;
+}
+
+header > ul li current{
+    border-bottom: 2px solid #B5E853;
 }
 
 /**************** Footer ****************/
